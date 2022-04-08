@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+</head>
+
+<body>
+
+    <div class="appcontainer">
+        <div class="start_btn">
+            <button id="start" onclick="start()">Start Quiz</button>
+        </div>
+        <div class="rules">
+            <div class="header"><strong>Rules of the Quiz</strong></div>
+            <div class="infos">
+                <div class="info">1. You will only get <span class="span">15 seconds</span> per each question.</div>
+                <div class="info">2. Once you select your answer, you can't reselect.</div>
+                <div class="info">3. You can't select any option once time goes off.</div>
+                <div class="info">4. You can't exit the Quiz while you're playing.</div>
+                <div class="info">5. You'll get points of the basis of your correct answers.</div>
+            </div>
+            <div class="buttons">
+                <button id="different" onclick="exitQ_click()">Exit Quiz</button>
+                <button id="cont" onclick="continue_click()">Continue</button>
+            </div>
+        </div>
+        <div class="quiz_area">
+            <div class="quiz_header">
+                <div class="text_header">Amazing Quiz Application</div>
+                <div class="timer">
+                    <div id="time_left" class="time_left">Time Left </div>
+                    <div class="secs_left">15</div>
+                </div>
+            </div>
+            <div class="visual_time animation"></div>
+
+            <div class="main_part">
+                <div class="question">1. What does HTML stand for?</div>
+               
+                
+                <div class="options">
+                    <div class="option" id="one" onclick="option_click(1)">Hyper Text Markup Language <div class="tick" id="1">&#10003</div><div class="cross">&#10060;</div></div>
+                    <div class="option" id="two" onclick="option_click(2)">Hyper Text Preprocessor <div class="tick" id="2">&#10003</div><div class="cross">&#10060;</div></div>
+                    <div class="option" id="three" onclick="option_click(3)">Hyper Text Multiple Language <div class="tick" id="3">&#10003</div><div class="cross">&#10060;</div></div>
+                    <div class="option" id="four" onclick="option_click(4)">Hyper Tool Multi Language <div class="tick" id="4">&#10003</div><div class="cross">&#10060;</div></div>
+                </div>
+            </div>
+            <div class="hider"></div>
+            <div class="end_part">
+                <div class="current_question">1 of 5 Questions</div>
+                <div class="next_btn">
+                    <button id="next" onclick="Next()">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="congrats" id="congrats">
+            <img style="margin-bottom: 30px;width: 230px;" src="svg.svg" alt="">
+            <p style="font-size: 40px;font-family: cursive;">Congratulations</p>
+            <p id="result" style="font-family: cursive;">You got 4 out of 5</p>
+        </div>
+    </div>
+</body>
+<!-- <script src="data.js"></script> -->
+<script defer src="index.js"></script>
+</html>
